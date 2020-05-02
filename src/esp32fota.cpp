@@ -91,7 +91,7 @@ void esp32FOTA::execOTA()
             }
 
             // Next, the content type
-            if (line.startsWith("Content-Type: ".to_lower()))
+            if (line.startsWith("Content-Type: "))
             {
                 String contentType = getHeaderValue(line, "Content-Type: ");
                 Serial.println("Got " + contentType + " payload.");
